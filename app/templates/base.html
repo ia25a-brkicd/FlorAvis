@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head><title>App</title></head>
+<body>
+    <nav>
+        <a href="/">Home</a>
+        {% if session.get('user_id') %}
+            <a href="/profile">Profil</a>
+            <a href="/logout">Logout</a>
+        {% else %}
+            <a href="/login">Login</a>
+        {% endif %}
+    </nav>
+    <hr>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul>{% for msg in messages %}<li>{{ msg }}</li>{% endfor %}</ul>
+        {% endif %}
+    {% endwith %}
+    {% block content %}{% endblock %}
+</body>
+</html>
