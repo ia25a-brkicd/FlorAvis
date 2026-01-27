@@ -1,11 +1,12 @@
 body{
-    background-color: #eaafa8;
+    background-color: #f6cec1;
     color: black;
 }
 
 h1{
     font-size: 40px;
-    font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+    font-family: "Inter", sans-serif;
+    justify-content: center;
 }
 
 p{
