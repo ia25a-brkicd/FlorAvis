@@ -4,56 +4,72 @@
 
 {% block content %}
 <div class="home">
-<div class="homeContent">
-    <img class="homeImage"
-    src="{{ url_for('static', filename='styles/image/WebsiteChunkyCharcoalSoapBlock.png') }}"
-    alt="Chunky Charcoal Soap"
-    >
-    <div class="homeTextOverlay">
-        <p class="homeSlogan">Crafted with passion.<br> Defined by purity</p>
-        <button class="homeShopNow">Shop Now</button>
-    </div>
-</div>
-<div class="filler"></div>
-<div class="homeFooter">
-    <div class="homeFooterRight">
-        <p id="floravisTitel">Flor'avis</p>
-        <p id="floravisContent">A revolution in the soap industry</p>
-        <div class="socialMedia">
-            <button class="ttButton"><img class="ttImage"
-    src="{{ url_for('static', filename='styles/image/tiktokLogo.webp') }}"
-    alt="tiktok Image"
-    ></button>
-            <button class="instaButton"><img class="instaImage"
-    src="{{ url_for('static', filename='styles/image/instaLogo.png') }}"
-    alt="instagram Image"
-    ></button>
-        </div>
-    </div>
-    <div class="homeFooterLeft">
-        <div class="brandInfo">
-            <p id="brandTitel">Brand<br></p>
-            <p id="brandContent">Why Natural Products?<br>
-            The Flor'avis Difference<br>
-            No Harmful<br> 
-            Ingredients</p>
-        </div>
-        <div class="shopInfo">
-            <p id="shopTitel">Shop<br></p>
-            <p id="shopContent">Block soap<br>
-            Best seller<br>
-            Bundels<br> 
-            Announcements</p>
-        </div>
-        <div class="supportInfo">
-            <p id="supportTitel">Support<br></p>
-            <p id="supportContent">FAQ<br>
-            Contact us<br>
-            Store Policies<br> 
-            Shipping Policy</p>
-        </div>
-    </div>
-</div>
-</div>
 
+    <section class="homeContent">
+        <img
+            class="homeImage"
+            src="{{ url_for('static', filename='styles/image/WebsiteChunkyCharcoalSoapBlock.png') }}"
+            alt="Chunky Charcoal Soap"
+        >
+
+        <div class="homeTextOverlay">
+            <p class="homeSlogan">
+                Crafted with passion.<br>
+                Defined by purity
+            </p>
+            <button class="homeShopNow">Shop Now</button>
+        </div>
+    </section>
+
+    <footer class="homeFooter">
+
+        <div class="homeFooterRight">
+            <p class="footerBrand">Flor’avis</p>
+            <p class="footerTagline">A revolution in the soap industry</p>
+
+            <div class="socialMedia">
+                <button>
+                    <img src="{{ url_for('static', filename='styles/image/tiktokLogo.webp') }}" alt="TikTok">
+                </button>
+                <button>
+                    <img src="{{ url_for('static', filename='styles/image/instaLogo.png') }}" alt="Instagram">
+                </button>
+            </div>
+        </div>
+
+        <div class="homeFooterLeft">
+
+            <div class="footerColumn">
+                <h4>Brand</h4>
+                <ul class="footerList">
+                    <li>Why Natural Products?</li>
+                    <li>The Flor’avis Difference</li>
+                    <li>No Harmful Ingredients</li>
+                </ul>
+            </div>
+
+            <div class="footerColumn">
+                <h4>Shop</h4>
+                <ul class="footerList">
+                    <li>Block soap</li>
+                    <li>Best seller</li>
+                    <li>Bundles</li>
+                    <li>Announcements</li>
+                </ul>
+            </div>
+
+            <div class="footerColumn">
+                <h4>Support</h4>
+                <ul class="footerList">
+                    <li>FAQ</li>
+                    <li>Contact us</li>
+                    <li>Store Policies</li>
+                    <li>Shipping Policy</li>
+                </ul>
+            </div>
+
+        </div>
+    </footer>
+
+</div>
 {% endblock %}
