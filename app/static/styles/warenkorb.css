@@ -288,6 +288,26 @@ body {
   display: block;
 }
 
+.date-cvv {
+    display: flex;
+    gap: 20px;
+}
+
+.cvv-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.date-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkout-button {
+    display: flex;
+    gap: 20px;
+}
+
 
 
 
