@@ -78,6 +78,9 @@ def contact():
         print("========================")
     return render_template("contact.html")
 
+
+
+
 @app.route("/profil", methods=["GET", "POST"])
 def profil():
     if request.method == "POST":
