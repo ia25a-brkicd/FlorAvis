@@ -140,6 +140,11 @@ p{
     background-color: #fda78f;
 }
 
+/* Hide empty link tags to avoid default red link styling. */
+.links a.link {
+    display: none;
+}
+
 /* Formular Container (Name, Vorname, E-Mail, Passwort) */
 .header{
     width: 100%;
