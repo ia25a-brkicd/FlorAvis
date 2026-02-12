@@ -37,6 +37,10 @@ CREATE TABLE IF NOT EXISTS customer_payment (
     cvv VARCHAR(4) NOT NULL
 );
 
-
-
+CREATE TABLE IF NOT EXISTS orders (
+    order_id SERIAL PRIMARY KEY,
+    customer_addres_id INT NOT NULL REFERENCES customer_addres(customer_addres_id),
+    customer_payment_id INT NOT NULL REFERENCES customer_payment(customer_payment_id),
+    order_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
 
