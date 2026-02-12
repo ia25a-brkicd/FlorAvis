@@ -33,44 +33,16 @@
 </div>
 
 <script>
-    // Mock-Funktion um Bestellungen vom Backend zu laden
-    // TODO: Ersetze dies mit echten API-Calls zu deinem Backend
+    // Funktion um Bestellungen zu laden
     function getUserOrders() {
-        // Simuliere Bestellungen aus sessionStorage/localStorage
-        const mockOrders = localStorage.getItem('userOrders');
+        // Lade gespeicherte Orders aus sessionStorage (wird beim Schließen gelöscht)
+        const savedOrders = sessionStorage.getItem('userOrders');
         
-        if (mockOrders) {
-            return JSON.parse(mockOrders);
+        if (savedOrders) {
+            return JSON.parse(savedOrders);
         }
         
-        // Beispiel-Daten (zum Testen - später aus DB laden)
-        // Kommentiere diese Zeilen aus, um den "Empty State" zu testen:
-        /*
-        return [
-            {
-                id: 1,
-                date: '2026-02-10',
-                items: [
-                    { name: 'Rose Bouquet', price: 29.99, quantity: 2 },
-                    { name: 'Tulip Mix', price: 19.99, quantity: 1 }
-                ],
-                total: 79.97,
-                status: 'Delivered'
-            },
-            {
-                id: 2,
-                date: '2026-02-08',
-                items: [
-                    { name: 'Orchid Plant', price: 39.99, quantity: 1 }
-                ],
-                total: 39.99,
-                status: 'Shipped'
-            }
-        ];
-        
-        
         return []; // Keine Bestellungen
-        */
     }
 
     function formatDate(dateString) {
@@ -106,8 +78,8 @@
             let itemsHTML = order.items.map(item => `
                 <div class="order-item">
                     <span class="item-name">${item.name}</span>
-                    <span class="item-details">Qty: ${item.quantity} × $${item.price.toFixed(2)}</span>
-                    <span class="item-subtotal">$${(item.quantity * item.price).toFixed(2)}</span>
+                    <span class="item-details">Qty: ${item.quantity} × CHF ${item.price.toFixed(2)}</span>
+                    <span class="item-subtotal">CHF ${(item.quantity * item.price).toFixed(2)}</span>
                 </div>
             `).join('');
 
@@ -124,7 +96,7 @@
                 </div>
                 <div class="order-footer">
                     <span class="order-total-label">Total Price:</span>
-                    <span class="order-total-price">$${order.total.toFixed(2)}</span>
+                    <span class="order-total-price">CHF ${order.total.toFixed(2)}</span>
                 </div>
             `;
             
