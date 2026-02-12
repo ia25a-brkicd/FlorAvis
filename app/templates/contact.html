@@ -37,20 +37,6 @@
 
 
 
-        <form action="{{ url_for("add_product") }}" method="POST">
-            <input type="text" name="name" placeholder="Name" required>
-            <input type="number" name="price" placeholder="Price" required>
-            <br><br>
-            <button type="submit" name="action" value="add_product">Produkt hinzufügen</button>
-        </form>
-
-        <ul>
-            {% for products in products %}
-                <li>{{ products['name'] }} - {{ products[2] }}Geld</li>
-            {% endfor %}
-        </ul>
-
-
 
 
 
