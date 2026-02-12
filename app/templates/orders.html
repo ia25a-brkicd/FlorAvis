@@ -78,7 +78,7 @@
             let itemsHTML = order.items.map(item => `
                 <div class="order-item">
                     <span class="item-name">${item.name}</span>
-                    <span class="item-details">Qty: ${item.quantity} × CHF ${item.price.toFixed(2)}</span>
+                    <span class="item-details"> ${item.quantity} × CHF ${item.price.toFixed(2)}</span>
                     <span class="item-subtotal">CHF ${(item.quantity * item.price).toFixed(2)}</span>
                 </div>
             `).join('');

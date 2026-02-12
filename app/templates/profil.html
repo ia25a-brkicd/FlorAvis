@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}Contact & Support{% endblock %}
+{% block title %}Profile{% endblock %}
 
 {% block head %}
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -180,7 +180,7 @@ document.getElementById('registrieren-btn').addEventListener('click', function(e
         // Zeigt die Benachrichtigung an
         notification.classList.add('show');
         
-        // Versteckt die Benachrichtigung nach 7 Sekunden
+        // Versteckt die Benachrichtigung nach 7 Sekunden und lädt die Seite neu
         setTimeout(function() {
             
             // Entfernt die "show"-Klasse
@@ -188,8 +188,11 @@ document.getElementById('registrieren-btn').addEventListener('click', function(e
             
             // Fügt die "hide"-Klasse hinzu
             notification.classList.add('hide');
+            
+            // Lädt die Seite neu, um die Profilansicht anzuzeigen
+            window.location.reload();
         
-        }, 4000); // 4 Sekunden
+        }, 1); 
     });
 });
 </script>

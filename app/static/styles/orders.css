@@ -130,7 +130,7 @@ h1{
 
 .order-item {
     display: grid;
-    grid-template-columns: 2fr 1fr auto;
+    grid-template-columns: 1fr 180px 100px;
     gap: 15px;
     align-items: center;
     padding: 12px 0;
