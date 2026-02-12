@@ -130,7 +130,11 @@ h1{
 
 .order-item {
     display: grid;
+<<<<<<< HEAD
     grid-template-columns: 1fr 180px 100px;
+=======
+    grid-template-columns: 2fr 1fr auto;
+>>>>>>> master
     gap: 15px;
     align-items: center;
     padding: 12px 0;
