@@ -1,6 +1,8 @@
 from tarfile import data_filter
 
 from db import get_db
+from flask import current_app
+
 
 def add_customer_addres(salutation,name,surname,address,postal_code,city,tel,email):
     conn = get_db()
@@ -16,6 +18,7 @@ def add_customer_addres(salutation,name,surname,address,postal_code,city,tel,ema
 
     except Exception as e:
         print(f"Database error: {e}")
+        current_app.logger.error(e)
         conn.rollback()
     finally:
         cur.close()
@@ -29,6 +32,7 @@ def add_customer_payment(payment_method,card_name,card_number,expiry_date,cvv):
         conn.commit()
     except Exception as e:
         print(f"Database error: {e}")
+        current_app.logger.error(e)
         conn.rollback()
     finally:
         cur.close()
